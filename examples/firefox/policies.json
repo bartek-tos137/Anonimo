@@ -1,0 +1,10 @@
+{
+  "policies": {
+    "Certificates": {
+      "ImportEnterpriseRoots": true
+    },
+    "Proxy": {
+      "Mode": "system"
+    }
+  }
+}

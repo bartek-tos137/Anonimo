@@ -23,9 +23,10 @@ Nieobsługiwane formaty, kompresowane requesty i znane załączniki są zatrzymy
 
 ## Następne etapy produktu
 
-1. Pilotaż Windows i testy rzeczywistych sesji wszystkich docelowych klientów z danymi syntetycznymi.
+1. Priorytet pierwszy: instalacja i praca w tle na Windows oraz osobny odbiór Firefoxa i Chrome. Testy rzeczywistych sesji docelowych czatów i klientów API wykonuj z danymi syntetycznymi, według [planu odbioru](browser-validation.md).
 2. Dobór i trening lokalnego detektora na etykietowanych danych PL/EN, ocena recall i wpływu na zadania użytkownika.
 3. Ekstrakcja tekstu i OCR dla załączników, polityki per aplikacja/rola, rozróżnienie sekretów od dozwolonego kontekstu kodu.
 4. Podpisany instalator i aktualizacje, widoczny status w trayu, czytelne powiadomienia o zatrzymanym żądaniu oraz zarządzanie polityką przez IT.
+5. Priorytet platformowy drugi: Linux i macOS, ze wspólnym silnikiem i osobnymi integracjami autostartu, certyfikatów oraz proxy. Działający deweloperski proces na Linuxie nie oznacza gotowej instalacji użytkowej dla tej platformy.
 
 Nazwy osób/firm mogą być wrażliwe tylko w określonym kontekście. Znaczenie pseudonimu dla dalszego zadania i utrata użyteczności wymagają oceny obok samej detekcji. Wdrożenie nie powinno deklarować „100% accuracy” ani „wszystkie czaty” na podstawie samych testów transportu.

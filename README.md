@@ -4,11 +4,13 @@ Prototyp lokalnej warstwy DLP dla czatów internetowych i klientów AI. Użytkow
 
 **Stan: działający prototyp transportu i reguł, nie gotowy produkt korporacyjny.** Własny model nie jest jeszcze wytrenowany ani dołączony. Domyślnie działa tryb `rules_only`, który nie wykryje wszystkich nazw osób, firm ani tajemnic przedsiębiorstwa. Zgodność z zalogowanymi aplikacjami i klientami należy potwierdzić w pilotażu.
 
+**Priorytety platform:** najpierw Windows z Firefoxem i Chrome; w drugiej kolejności Linux i macOS. Rdzeń pozostaje przenośny, ale testy na Linuxie nie zastępują odbioru docelowej instalacji Windows.
+
 ## Przepływ
 
 ```mermaid
 flowchart LR
-    A[Chrome / Edge / IDE / CLI] --> B[Lokalne proxy HTTPS / WSS]
+    A[Firefox / Chrome / IDE / CLI] --> B[Lokalne proxy HTTPS / WSS]
     B --> C[Adapter formatu]
     C --> D[Reguły YAML]
     D --> E[Opcjonalny lokalny detektor modelowy]
@@ -61,6 +63,7 @@ Bez proxy można zainstalować sam rdzeń (`uv sync --locked`) i uruchomić `ano
 ## Windows, Burp i klienci
 
 - [Instalacja w tle, autostart i usuwanie ustawień](docs/windows.md)
+- [Plan odbioru Windows: Firefox i Chrome](docs/browser-validation.md)
 - [Burp, IDE, Codex, Claude Code i Copilot](docs/integrations.md)
 - [Model, wydajność i ocena skuteczności](docs/model-and-evaluation.md)
 - [Granice prototypu i dalsza architektura](docs/architecture.md)

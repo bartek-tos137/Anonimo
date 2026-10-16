@@ -81,7 +81,7 @@ try {
     Set-ItemProperty $Internet -Name ProxyOverride -Value '<local>;localhost;127.0.0.1'
     Set-ItemProperty $Internet -Name ProxyEnable -Type DWord -Value 1
     . (Join-Path $PSScriptRoot 'Notify-ProxyChange.ps1')
-    Write-Host 'Anonimo is running and will start at login. Restart Chrome/Edge. Local policy and CA are in LocalAppData\Anonimo.'
+    Write-Host 'Anonimo is running and will start at login. Restart Firefox/Chrome; see docs/windows.md for Firefox proxy and certificate settings. Local policy and CA are in LocalAppData\Anonimo.'
 } catch {
     & (Join-Path $PSScriptRoot 'Uninstall-Background.ps1') -RestoreAfterFailedInstall
     throw
