@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "anonimo"
+version = "0.1.0"
+description = "Local-first prompt pseudonymization for web LLM clients"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi>=0.115,<1", "uvicorn>=0.34,<1", "httpx>=0.28,<1",
+  "pydantic>=2.10,<3", "PyYAML>=6.0.2,<7", "regex>=2024.11.6",
+]
+
+[project.optional-dependencies]
+proxy = ["mitmproxy>=12.2.1,<13"]
+
+[project.scripts]
+anonimo = "anonimo.__main__:main"
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "websockets>=15,<17"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
